@@ -221,7 +221,7 @@ class JANCode:
     def _main(self, number: str, ratio: str) -> None:
         """メイン処理"""
         directory.check_dir("./img")
-        self._input_number: str = number
+        self._input_number: str = str(number)
         self._ratio: int = int(ratio)
         self._set_jancode_property()
         self._calc_checkdigit()
