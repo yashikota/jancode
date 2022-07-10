@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "jancode"
+version = "0.1.0"
+description = ""
+authors = ["kota"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+opencv-python = "^4.6.0"
+numpy = "^1.23.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+setuptools = "^63.1.0"
+wheel = "^0.37.1"
+twine = "^4.0.1"
+pyzbar = "^0.1.9"
+pre-commit = "^2.19.0"
+pysen = {version = "^0.10.2", extras = ["lint"]}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pysen]
+version = "0.9"
+
+[tool.pysen.lint]
+enable_black = false
+enable_flake8 = true
+enable_isort = true
+enable_mypy = true
+mypy_preset = "strict"
+line_length = 88
+py_version = "py310"
+[[tool.pysen.lint.mypy_targets]]
+  paths = ["."]
