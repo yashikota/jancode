@@ -3,6 +3,7 @@ import sys
 import jancode.check_digit as checkdigit
 import jancode.convert as convert
 import jancode.property as property
+import jancode.create_svg as svg
 
 
 def check_digit(number: str, length: int) -> None:
@@ -20,5 +21,9 @@ def generate(number: int | str, path: str = ".") -> None:
         str(number)
     )
     check_digit(str(number), length)
-    binary_number = convert.binary(jancode_number, combi, center_position)
+    binary_number: str = convert.binary(jancode_number, combi, center_position)
+
+    # TODO: dubug
     print(binary_number)
+
+    svg.create(binary_number, width, path, str(number))
