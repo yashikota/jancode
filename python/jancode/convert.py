@@ -1,7 +1,7 @@
 import jancode.characters as characters
 
 
-def binary(jancode: str, combination: str, center: int) -> None:
+def binary(jancode: str, combination: str, center: int) -> str:
     """Converts input numbers to binary numbers for JAN code and adds guard bars"""
     binary_number: str = ""
     left_right_guard: str = "101"
