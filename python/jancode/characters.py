@@ -1,5 +1,7 @@
 def combination(number: str) -> str:
-    """Return a combination of odd and even parity."""
+    """
+    Return a combination of odd and even parity
+    """
     combi = [
         "OOOOOO",
         "OOEOEE",

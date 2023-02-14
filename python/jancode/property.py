@@ -2,7 +2,9 @@ from jancode.characters import combination
 
 
 def set_property(number: str) -> None:
-    """Set the length, height, and width of the JAN code"""
+    """
+    Set the length, height, and width of the JAN code
+    """
     guard_bar_length: int = 11  # Guard bar length
     length: int = len(number)
     width: int = int(length * 7 + guard_bar_length)
