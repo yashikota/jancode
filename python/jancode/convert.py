@@ -2,12 +2,14 @@ import jancode.characters as characters
 
 
 def binary(jancode: str, combination: str, center: int) -> str:
-    """Converts input numbers to binary numbers for JAN code and adds guard bars"""
+    """
+    Converts input numbers to binary numbers for JAN code and adds guard bars
+    """
     binary_number: str = ""
     left_right_guard: str = "101"
     center_guard: str = "01010"
 
-    # Left guard bar added.
+    # The left guard bar added
     binary_number += left_right_guard
 
     for i in range(len(jancode)):
@@ -19,7 +21,7 @@ def binary(jancode: str, combination: str, center: int) -> str:
         elif i > center:
             binary_number += characters.right_even_characters(jancode[i])
 
-    # Right guard bar added.
+    # The right guard bar added
     binary_number += left_right_guard
 
     return binary_number
