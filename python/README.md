@@ -3,6 +3,7 @@
 ## What is this
 
 Library to generate barcode called JANcode.  
+<https://pypi.org/project/jancode/>  
 
 ![jancode](https://raw.githubusercontent.com/yashikota/jancode/master/example.png)
 
